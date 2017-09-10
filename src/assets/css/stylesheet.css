@@ -1,0 +1,212 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css?family=Roboto");
+:root {
+  --root-bg-color: #FBFBFB;
+  --primary-color: #3778B4;
+  --head-text-color: #FFFFFF;
+  --body-text-color: #1D1D1D;
+  --body-bg-color: #FFFFFF;
+  --dark-shadow: rgba(0, 0, 0, 0.05);
+  --semi-shadow: rgba(0, 0, 0, 0.1); }
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--root-bg-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: 'Roboto', sans-serif;
+  width: 100%; }
+
+body > * {
+  z-index: 2; }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+  font-family: inherit; }
+
+a {
+  text-decoration: none;
+  color: var(--primary-color); }
+
+div.fake-header {
+  height: 300px;
+  width: 100%;
+  background: var(--primary-color);
+  position: absolute;
+  top: 0;
+  z-index: 1; }
+
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 100px;
+  width: 80%;
+  color: var(--head-text-color); }
+  header a {
+    font-weight: bold;
+    color: inherit;
+    text-decoration: none;
+    font-size: 14pt; }
+  header span {
+    padding: 1rem;
+    transition: all 50ms linear; }
+    header span:hover {
+      background: var(--semi-shadow);
+      border-radius: 2px; }
+
+section.well {
+  height: 60px;
+  width: 80%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0rem 1rem;
+  background: var(--semi-shadow);
+  color: var(--head-text-color); }
+  section.well input {
+    color: var(--head-text-color);
+    background: transparent;
+    border: none;
+    outline: none;
+    width: 100%;
+    height: 40px;
+    margin: 1rem;
+    font-size: 14pt; }
+    section.well input::placeholder {
+      color: var(--head-text-color); }
+  section.well ul {
+    list-style: none;
+    text-indent: none;
+    margin: 0px;
+    padding: 0px;
+    width: auto;
+    display: flex;
+    flex-direction: row; }
+    section.well ul li {
+      width: 24px;
+      font-size: 14pt;
+      text-align: center;
+      padding: .4rem;
+      margin: .1rem;
+      border-radius: 2px;
+      transition: all 50ms linear; }
+      section.well ul li:hover {
+        background: var(--semi-shadow);
+        cursor: pointer; }
+
+section {
+  background: var(--body-bg-color);
+  width: calc(80% - 4rem);
+  margin: 1rem 0rem;
+  padding: 3rem 2rem;
+  line-height: 18pt;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; }
+  section.center {
+    align-items: center; }
+  section p {
+    max-width: 360px;
+    text-align: justify; }
+  section ul#information {
+    width: 360px; }
+  section h1 {
+    font-size: 24pt;
+    margin: 2rem;
+    color: var(--primary-color);
+    font-weight: bold;
+    display: flex; }
+    section h1 span {
+      font-size: 60%;
+      margin-left: .5rem;
+      color: var(--body-text-color); }
+  section div.search-result {
+    padding: 1rem;
+    background: rgba(0, 0, 0, 0.01);
+    margin: .5rem 0rem; }
+    section div.search-result .content {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between; }
+      section div.search-result .content span {
+        margin: 0rem 1rem;
+        min-width: 2.25em;
+        font-size: 10pt; }
+      section div.search-result .content h1 {
+        margin: 0rem 1rem;
+        font-size: 1.3em;
+        font-size: 20pt;
+        font-weight: normal;
+        font-family: "HiraKakuPro-W3", "Hiragino Kaku Gothic Pro W3", "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", "メイリオ", Meiryo, "游ゴシック", YuGothic, "ＭＳ Ｐゴシック", "MS PGothic", "ＭＳ ゴシック", "MS Gothic", sans-serif;
+        color: var(--body-text-color); }
+        section div.search-result .content h1 label {
+          font-family: 'Roboto', sans-serif;
+          font-size: 14pt;
+          margin: 0rem 1rem; }
+      section div.search-result .content h2 {
+        margin: 1rem;
+        font-size: 16pt; }
+      section div.search-result .content .title {
+        display: flex;
+        flex-direction: column;
+        justify-content: center; }
+      section div.search-result .content .tags {
+        display: flex;
+        flex-direction: column;
+        justify-content: center; }
+        section div.search-result .content .tags p {
+          text-align: right; }
+        section div.search-result .content .tags ul {
+          list-style: none;
+          margin: 0;
+          padding: 0;
+          display: flex;
+          flex-direction: row;
+          justify-content: flex-end; }
+          section div.search-result .content .tags ul a {
+            color: var(--head-text-color); }
+          section div.search-result .content .tags ul li {
+            padding: .5rem .7rem;
+            margin: .2rem;
+            background: var(--primary-color);
+            border-radius: 2px; }
+    section div.search-result .footer {
+      width: 100%;
+      line-height: 24pt; }
+      section div.search-result .footer ol {
+        margin: 1rem 4rem;
+        padding: 0; }
+        section div.search-result .footer ol li {
+          font-size: 14pt; }
+
+footer {
+  padding: 1rem 0rem;
+  font-size: 11pt;
+  width: 80%; }
+
+@media screen and (max-width: 900px) {
+  header,
+  section,
+  section.well,
+  footer {
+    width: 90%; }
+    header p,
+    section p,
+    section.well p,
+    footer p {
+      max-width: 100%; }
+  section div.search-result .content {
+    display: flex;
+    flex-direction: column; } }

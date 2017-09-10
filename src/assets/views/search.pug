@@ -1,0 +1,29 @@
+extends layouts/_global.pug
+
+block variables
+  - var page_title = "{{title}}";
+
+block content
+  section(class='content')
+    //- {{SEARCH_RESULTS}}
+
+    h1 #[a(href='')='Slang'] #[span=' — 1 found']
+
+    div(class='search-result')
+      div(class='content')
+        div(class='title')
+          span うそ
+          h1 嘘くさい #[label='usokusai']
+          h2 suspicious, contrived, false-sounding​
+
+        div(class='tags')
+          ul
+            li #[a(href='')='slang']
+            li #[a(href='')='common']
+          p(class='source') #[a(href='#')='Source']
+      div(class='footer')
+        ol
+          li 実際彼には嘘をでっち上げる癖がある。
+          li 「外国では魚を生で食べない」というのは嘘だ。
+          li トムが嘘をつくのは、今回が最初ではないんです。
+        

@@ -1,0 +1,26 @@
+extends layouts/_global.pug
+
+block variables
+  - var page_title = "home";
+
+block content
+  section(class='content center')
+    p. 
+      Jslang or “japanese slang” is a site designed 
+      to index different kinds of Japanese slang and 
+      onomatapia
+    p.
+      Enter above any set of Japanese, English, Romaji, 
+      words or even just basic text and we will compare 
+      it to our myriad of different content that we’ve 
+      collected!
+    p.
+      Still not quite sure? Try searching one of the things below..
+    ul(id='information')
+      a(href='search/ピカピカ') #[li='Japanese - ピカピカ']
+      a(href='search/elephant') #[li='English - Elephant']
+      a(href='search/chuuchuu') #[li='Romaji - ChuuChuu']
+      a(href='search/#onomatapia') #[li='Tag - Onomatapia']
+
+    p.
+      Want to refine further? #[a(href='#')='More Search Options!']
